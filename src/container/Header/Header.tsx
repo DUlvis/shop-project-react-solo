@@ -1,10 +1,10 @@
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
+import Menu from 'components/Menu/Menu'
 
 type Props = {}
 const Header = (props: Props) => {
@@ -29,7 +29,7 @@ const Header = (props: Props) => {
                         >
                             News
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        <Menu />
                     </Toolbar>
                 </Container>
             </AppBar>
