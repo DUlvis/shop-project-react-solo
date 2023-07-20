@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/shop-project-react-solo/static/js/main.c6989bcb.js",
+    "main.js": "/shop-project-react-solo/static/js/main.e5385d61.js",
+    "static/media/logo.svg": "/shop-project-react-solo/static/media/logo.90c9fefe8f9b5aebb4a55e3f76195b8a.svg",
     "index.html": "/shop-project-react-solo/index.html",
-    "main.c6989bcb.js.map": "/shop-project-react-solo/static/js/main.c6989bcb.js.map"
+    "main.e5385d61.js.map": "/shop-project-react-solo/static/js/main.e5385d61.js.map"
   },
   "entrypoints": [
-    "static/js/main.c6989bcb.js"
+    "static/js/main.e5385d61.js"
   ]
 }
