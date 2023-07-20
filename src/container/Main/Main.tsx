@@ -5,7 +5,13 @@ type Props = {}
 
 const Main = (props: Props) => {
     return (
-        <Container maxWidth="lg">
+        <Container
+            maxWidth="lg"
+            sx={{
+                padding: '50px 0',
+            }}
+            component="main"
+        >
             <Home />
         </Container>
     )
