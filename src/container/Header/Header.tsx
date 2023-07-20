@@ -6,7 +6,7 @@ import Container from '@mui/material/Container'
 import Menu from 'components/Menu/Menu'
 import CartHeader from 'components/CartHeader/CartHeader'
 import Logo from 'components/Logo/Logo'
-import classes from './Header.module.css'
+import classes from './Header.module.scss'
 
 type Props = {}
 const Header = (props: Props) => {
