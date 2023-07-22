@@ -19,23 +19,24 @@ type Props = {
 
 class ProductsListItem extends Component<Props> {
     render() {
+        const { title, desc, type, capacity, price, image } = this.props
         return (
             <Card className="product" variant="outlined">
                 <CardContent>
                     <div className="product-img">
-                        <img src={this.props.image} alt="" />
+                        <img src={image} alt="" />
                     </div>
-                    <div className="product-title">{this.props.title}</div>
-                    <div className="product-desc">{this.props.desc}</div>
+                    <div className="product-title">{title}</div>
+                    <div className="product-desc">{desc}</div>
                     <div className="product-features">
-                        <span>Type:</span> {this.props.type}
+                        <span>Type:</span> {type}
                     </div>
                     <div className="product-features">
-                        <span>Capacity:</span> {this.props.capacity}Gb
+                        <span>Capacity:</span> {capacity}Gb
                     </div>
                     <div className="product-price">
                         <span>Price:</span>
-                        {this.props.price}$
+                        {price}$
                     </div>
                     <div className="product-quantity">
                         <Button variant="outlined">-</Button>
@@ -50,16 +51,5 @@ class ProductsListItem extends Component<Props> {
         )
     }
 }
-
-// const ProductsListItem = ({
-//     title,
-//     desc,
-//     type,
-//     capacity,
-//     price,
-//     image,
-// }: Props) => {
-
-// }
 
 export default ProductsListItem
