@@ -7,8 +7,6 @@ import {
 } from '@mui/material'
 import { Component } from 'react'
 import './ProductsListItem.scss'
-import { isDisabled } from '@testing-library/user-event/dist/utils'
-import { count } from 'console'
 
 type Props = {
     title: string
