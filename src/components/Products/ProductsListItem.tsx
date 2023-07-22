@@ -26,7 +26,7 @@ class ProductsListItem extends Component<Props, State> {
         count: 1,
     }
 
-    onIncrement() {
+    onIncrement = () => {
         this.setState((prevState) => ({
             count: prevState.count + 1,
         }))
@@ -55,10 +55,7 @@ class ProductsListItem extends Component<Props, State> {
                     <div className="product-quantity">
                         <Button variant="outlined">-</Button>
                         <TextField value={this.state.count} size="small" />
-                        <Button
-                            variant="outlined"
-                            onClick={() => this.onIncrement()}
-                        >
+                        <Button variant="outlined" onClick={this.onIncrement}>
                             +
                         </Button>
                     </div>
