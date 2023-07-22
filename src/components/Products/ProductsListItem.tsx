@@ -7,6 +7,8 @@ import {
 } from '@mui/material'
 import { Component } from 'react'
 import './ProductsListItem.scss'
+import { isDisabled } from '@testing-library/user-event/dist/utils'
+import { count } from 'console'
 
 type Props = {
     title: string
@@ -31,6 +33,11 @@ class ProductsListItem extends Component<Props, State> {
             count: prevState.count + 1,
         }))
     }
+    onDecrement = () => {
+        this.setState((prevState) => ({
+            count: prevState.count - 1,
+        }))
+    }
 
     render() {
         const { title, desc, type, capacity, price, image } = this.props
@@ -53,9 +60,19 @@ class ProductsListItem extends Component<Props, State> {
                         {price}$
                     </div>
                     <div className="product-quantity">
-                        <Button variant="outlined">-</Button>
+                        <Button
+                            variant="outlined"
+                            onClick={this.onDecrement}
+                            disabled={this.state.count <= 1}
+                        >
+                            -
+                        </Button>
                         <TextField value={this.state.count} size="small" />
-                        <Button variant="outlined" onClick={this.onIncrement}>
+                        <Button
+                            variant="outlined"
+                            onClick={this.onIncrement}
+                            disabled={this.state.count >= 10}
+                        >
                             +
                         </Button>
                     </div>
