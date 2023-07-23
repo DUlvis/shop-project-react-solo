@@ -69,7 +69,7 @@ const ProductsListItem = ({
                     <span>Price:</span>
                     {price}$
                 </div>
-                <p>Color: {color}</p>
+                <p className={`${color}`}>Color: {color}</p>
                 <button onClick={changeColor}>Change color</button>
                 <div className="product-quantity">
                     <Button
