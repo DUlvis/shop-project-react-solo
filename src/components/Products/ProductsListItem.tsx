@@ -8,16 +8,18 @@ import {
 import './ProductsListItem.scss'
 import { useState } from 'react'
 type Props = {
+    id: number
     title: string
     desc: string
     type: string
     capacity: string
     price: number
     image: string
-    addProductToCart: (count: number, price: number) => void
+    addProductToCart: (id: number, count: number) => void
 }
 
 const ProductsListItem = ({
+    id,
     title,
     desc,
     type,
@@ -74,7 +76,7 @@ const ProductsListItem = ({
             <CardActions className="btns-wrap">
                 <Button
                     variant="outlined"
-                    onClick={() => addProductToCart(count, price)}
+                    onClick={() => addProductToCart(id, count)}
                 >
                     Add to cart
                 </Button>
