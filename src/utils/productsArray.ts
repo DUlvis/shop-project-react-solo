@@ -1,4 +1,4 @@
-type ProductProps = {
+export type ProductProps = {
     id:number
     title: string
     desc: string
@@ -16,25 +16,25 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "256",
         price: 1000,
-        image:"shop-project-react-solo/images/iphone-purple.jpg",
+        image:"images/iphone-purple.jpg",
     },
     {
-        id:2,
+        id:11,
         title: "iPhone 13 Pro",
         desc: "This is iPhone 14 Pro",
         type: "phone",
         capacity: "128",
         price: 500,
-        image:"shop-project-react-solo/images/iphone-gold.jpg",
+        image:"images/iphone-gold.jpg",
     },
     {
-        id:3,
+        id:33,
         title: "iPhone 13",
         desc: "This is iPhone 13",
         type: "phone",
         capacity: "64",
         price: 2000,
-        image:"shop-project-react-solo/images/iphone-green.jpg",
+        image:"images/iphone-green.jpg",
     },
     {
         id:4,
@@ -43,16 +43,16 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "256",
         price: 1000,
-        image:"shop-project-react-solo/images/iphone-white.jpg",
+        image:"images/iphone-white.jpg",
     },
     {
-        id:5,
+        id:43,
         title: "iPhone 13 Pro MAX",
         desc: "This is iPhone 14 Pro MAX",
         type: "phone",
         capacity: "512",
         price: 1500,
-        image:"shop-project-react-solo/images/iphone-red.jpg",
+        image:"images/iphone-red.jpg",
     },
     {
         id:6,
@@ -61,8 +61,13 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "64",
         price: 500,
-        image:"shop-project-react-solo/images/iphone-black.jpg",
+        image:"images/iphone-black.jpg",
     },
 ]
+
+export const getProductsObject = (array:ProductProps[]) => array.reduce ((object,product) => ({
+    ...object,
+    [product.id]:product
+}), {})
 
 export default productsArray
