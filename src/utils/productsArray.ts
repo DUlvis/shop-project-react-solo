@@ -1,4 +1,4 @@
-type ProductProps = {
+export type ProductProps = {
     id:number
     title: string
     desc: string
@@ -19,7 +19,7 @@ const productsArray:ProductProps[] = [
         image:"shop-project-react-solo/images/iphone-purple.jpg",
     },
     {
-        id:2,
+        id:11,
         title: "iPhone 13 Pro",
         desc: "This is iPhone 14 Pro",
         type: "phone",
@@ -28,7 +28,7 @@ const productsArray:ProductProps[] = [
         image:"shop-project-react-solo/images/iphone-gold.jpg",
     },
     {
-        id:3,
+        id:33,
         title: "iPhone 13",
         desc: "This is iPhone 13",
         type: "phone",
@@ -46,7 +46,7 @@ const productsArray:ProductProps[] = [
         image:"shop-project-react-solo/images/iphone-white.jpg",
     },
     {
-        id:5,
+        id:43,
         title: "iPhone 13 Pro MAX",
         desc: "This is iPhone 14 Pro MAX",
         type: "phone",
@@ -64,5 +64,10 @@ const productsArray:ProductProps[] = [
         image:"shop-project-react-solo/images/iphone-black.jpg",
     },
 ]
+
+export const getProductsObject = (array:ProductProps[]) => array.reduce ((object,product) => ({
+    ...object,
+    [product.id]:product
+}), {})
 
 export default productsArray
