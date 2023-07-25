@@ -16,7 +16,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "256",
         price: 1000,
-        image:"shop-project-react-solo/images/iphone-purple.jpg",
+        image:"images/iphone-purple.jpg",
     },
     {
         id:11,
@@ -25,7 +25,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "128",
         price: 500,
-        image:"shop-project-react-solo/images/iphone-gold.jpg",
+        image:"images/iphone-gold.jpg",
     },
     {
         id:33,
@@ -34,7 +34,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "64",
         price: 2000,
-        image:"shop-project-react-solo/images/iphone-green.jpg",
+        image:"images/iphone-green.jpg",
     },
     {
         id:4,
@@ -43,7 +43,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "256",
         price: 1000,
-        image:"shop-project-react-solo/images/iphone-white.jpg",
+        image:"images/iphone-white.jpg",
     },
     {
         id:43,
@@ -52,7 +52,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "512",
         price: 1500,
-        image:"shop-project-react-solo/images/iphone-red.jpg",
+        image:"images/iphone-red.jpg",
     },
     {
         id:6,
@@ -61,7 +61,7 @@ const productsArray:ProductProps[] = [
         type: "phone",
         capacity: "64",
         price: 500,
-        image:"shop-project-react-solo/images/iphone-black.jpg",
+        image:"images/iphone-black.jpg",
     },
 ]
 
