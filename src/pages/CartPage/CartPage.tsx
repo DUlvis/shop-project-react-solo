@@ -7,9 +7,10 @@ type Props = {
     productsInCart: {
         [id: number]: number
     }
+    removeProductFromCart: (id: number) => void
 }
 
-const CartPage = ({ productsInCart }: Props) => {
+const CartPage = ({ productsInCart, removeProductFromCart }: Props) => {
     return (
         <div>
             <Typography
@@ -25,6 +26,7 @@ const CartPage = ({ productsInCart }: Props) => {
                 <CartProductsList
                     productsInCart={productsInCart}
                     CartItem={CartProductsListItemExtended}
+                    removeProductFromCart={removeProductFromCart}
                 />
             </Grid>
 
