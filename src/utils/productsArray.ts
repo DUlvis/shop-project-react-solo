@@ -19,7 +19,7 @@ const productsArray:ProductProps[] = [
         image:"images/iphone-purple.jpg",
     },
     {
-        id:11,
+        id:2,
         title: "iPhone 13 Pro",
         desc: "This is iPhone 14 Pro",
         type: "phone",
@@ -28,7 +28,7 @@ const productsArray:ProductProps[] = [
         image:"images/iphone-gold.jpg",
     },
     {
-        id:33,
+        id:3,
         title: "iPhone 13",
         desc: "This is iPhone 13",
         type: "phone",
@@ -46,7 +46,7 @@ const productsArray:ProductProps[] = [
         image:"images/iphone-white.jpg",
     },
     {
-        id:43,
+        id:5,
         title: "iPhone 13 Pro MAX",
         desc: "This is iPhone 14 Pro MAX",
         type: "phone",
