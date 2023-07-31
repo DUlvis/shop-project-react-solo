@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/lodash": "^4.14.196",
     "prettier": "3.0.0"
   }
