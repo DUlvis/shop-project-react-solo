@@ -24,13 +24,10 @@ const App = () => {
     const removeProductFromCart = (id: number) =>
         setProductsInCart((prevState: ProductsInCart) => omit(prevState, [id]))
 
-    const incrementCount = (id: number) =>
+    const changeProductQuantity = (id: number, count: number) =>
         setProductsInCart((prevState: ProductsInCart) => ({
-            [id]: prevState[id] + 1,
-        }))
-    const decrementCount = (id: number) =>
-        setProductsInCart((prevState: ProductsInCart) => ({
-            [id]: prevState[id] - 1,
+            ...prevState,
+            [id]: count,
         }))
 
     return (
@@ -42,6 +39,7 @@ const App = () => {
                     addProductToCart={addProductToCart}
                     productsInCart={productsInCart}
                     removeProductFromCart={removeProductFromCart}
+                    changeProductQuantity={changeProductQuantity}
                 />
             </StyledEngineProvider>
         </>
