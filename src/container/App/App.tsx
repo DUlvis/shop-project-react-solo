@@ -9,11 +9,28 @@ type ProductsInCart = {
     [id: number]: number
 }
 
+type ProductsLikeState = {
+    [id: number]: boolean
+}
+
 const App = () => {
     const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
         1: 5,
         2: 1,
     })
+
+    const [productsLikeState, setProductsLikeState] =
+        useState<ProductsLikeState>({
+            1: true,
+            2: true,
+        })
+
+    const toggleLikeState = (id: number) => {
+        setProductsLikeState((prevState: ProductsLikeState) => ({
+            ...prevState,
+            [id]: !prevState[id],
+        }))
+    }
 
     const addProductToCart = (id: number, count: number) => {
         setProductsInCart((prevState: ProductsInCart) => ({
@@ -40,6 +57,8 @@ const App = () => {
                     productsInCart={productsInCart}
                     removeProductFromCart={removeProductFromCart}
                     changeProductQuantity={changeProductQuantity}
+                    productsLikeState={productsLikeState}
+                    toggleLikeState={toggleLikeState}
                 />
             </StyledEngineProvider>
         </>

@@ -11,6 +11,8 @@ type Props = {
     productsInCart: { [id: number]: number }
     removeProductFromCart: (id: number) => void
     changeProductQuantity: (id: number, count: number) => void
+    productsLikeState: { [id: number]: boolean }
+    toggleLikeState: (id: number) => void
 }
 
 const Main = ({
@@ -18,6 +20,8 @@ const Main = ({
     productsInCart,
     removeProductFromCart,
     changeProductQuantity,
+    productsLikeState,
+    toggleLikeState,
 }: Props) => {
     return (
         <Container
@@ -30,7 +34,13 @@ const Main = ({
             <Routes>
                 <Route
                     path="/shop-project-react-solo/"
-                    element={<Home addProductToCart={addProductToCart} />}
+                    element={
+                        <Home
+                            addProductToCart={addProductToCart}
+                            productsLikeState={productsLikeState}
+                            toggleLikeState={toggleLikeState}
+                        />
+                    }
                 />
                 <Route
                     path="shop-project-react-solo/about"
