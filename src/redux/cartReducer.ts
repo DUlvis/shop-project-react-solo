@@ -6,27 +6,30 @@ type ProductsInCart = {
 }
 
 const initialState: ProductsInCart = {
-    1: 3,
-    2: 3,
+    1:1
 }
 
 const cartSlice = createSlice({
     name: 'productsInCart',
     initialState,
     reducers: {
-        addProductToCart: (state,action) => ({
+        addProductToCart: (state, action) => ({
             ...state,
-            [action.payload.id]: (state[action.payload.id] || 0) + action.payload.count
+            [action.payload.id]:
+                (state[action.payload.id] || 0) + action.payload.count,
         }),
-        removeProductFromCart: (state,action) => omit(state,action.payload),
-        changeProductQuantity: (state,action) => ({
+        removeProductFromCart: (state, action) => omit(state, action.payload),
+        changeProductQuantity: (state, action) => ({
             ...state,
-            [action.payload.id]: action.payload.count
-        })
-
+            [action.payload.id]: action.payload.count,
+        }),
     },
 })
 
-export const {addProductToCart, removeProductFromCart, changeProductQuantity} = cartSlice.actions 
+export const {
+    addProductToCart,
+    removeProductFromCart,
+    changeProductQuantity,
+} = cartSlice.actions
 
 export default cartSlice.reducer

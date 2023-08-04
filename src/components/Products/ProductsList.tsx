@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
-import productsArray from 'utils/productsArray'
+import { useAppSelector } from 'redux/hooks'
 
 type ProductProps = {
     id: number
@@ -13,6 +13,8 @@ type ProductProps = {
 }
 
 const ProductsList = () => {
+    const productsArray = useAppSelector((state) => state.products)
+
     return (
         <>
             <Grid
