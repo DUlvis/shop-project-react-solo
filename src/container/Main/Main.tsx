@@ -1,6 +1,7 @@
 import Container from '@mui/material/Container'
 import AboutPage from 'pages/AboutPage/AboutPage'
 import CartPage from 'pages/CartPage/CartPage'
+import CheckoutPage from 'pages/CheckoutPage/CheckoutPage'
 import Home from 'pages/Home/Home'
 import PaymentPage from 'pages/PaymentPage/PaymentPage'
 import ShippingPage from 'pages/ShippingPage/ShippingPage'
@@ -33,6 +34,7 @@ const Main = () => {
                     path="shop-project-react-solo/cart"
                     element={<CartPage />}
                 />
+                <Route path="checkout" element={<CheckoutPage />} />
             </Routes>
         </Container>
     )
