@@ -4,11 +4,11 @@ type Props = {}
 const Menu = (props: Props) => {
     return (
         <>
-            <MenuItem to="shop-project-react-solo/">Home</MenuItem>
-            <MenuItem to="shop-project-react-solo/about">About</MenuItem>
-            <MenuItem to="shop-project-react-solo/shipping">Shipping</MenuItem>
-            <MenuItem to="shop-project-react-solo/payment">Payment</MenuItem>
-            <MenuItem to="shop-project-react-solo/cart">Cart</MenuItem>
+            <MenuItem to="/">Home</MenuItem>
+            <MenuItem to="about">About</MenuItem>
+            <MenuItem to="shipping">Shipping</MenuItem>
+            <MenuItem to="payment">Payment</MenuItem>
+            <MenuItem to="cart">Cart</MenuItem>
         </>
     )
 }

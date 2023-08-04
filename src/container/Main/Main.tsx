@@ -18,23 +18,11 @@ const Main = () => {
             component="main"
         >
             <Routes>
-                <Route path="/shop-project-react-solo/" element={<Home />} />
-                <Route
-                    path="shop-project-react-solo/about"
-                    element={<AboutPage />}
-                />
-                <Route
-                    path="shop-project-react-solo/shipping"
-                    element={<ShippingPage />}
-                />
-                <Route
-                    path="shop-project-react-solo/payment"
-                    element={<PaymentPage />}
-                />
-                <Route
-                    path="shop-project-react-solo/cart"
-                    element={<CartPage />}
-                />
+                <Route path="/" element={<Home />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="shipping" element={<ShippingPage />} />
+                <Route path="payment" element={<PaymentPage />} />
+                <Route path="cart" element={<CartPage />} />
                 <Route path="checkout" element={<CheckoutPage />} />
                 <Route path="products/:id" element={<ProductPage />} />
             </Routes>
