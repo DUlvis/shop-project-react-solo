@@ -8,12 +8,7 @@ import CartHeader from 'components/CartHeader/CartHeader'
 import Logo from 'components/Logo/Logo'
 import './Header.scss'
 
-type Props = {
-    productsInCart: {
-        [id: number]: number
-    }
-}
-const Header = ({ productsInCart }: Props) => {
+const Header = () => {
     return (
         <>
             <AppBar position="static" className="app-bar">

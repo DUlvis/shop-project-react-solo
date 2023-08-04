@@ -6,19 +6,7 @@ import PaymentPage from 'pages/PaymentPage/PaymentPage'
 import ShippingPage from 'pages/ShippingPage/ShippingPage'
 import { Route, Routes } from 'react-router-dom'
 
-type Props = {
-    addProductToCart: (id: number, count: number) => void
-    productsInCart: { [id: number]: number }
-    removeProductFromCart: (id: number) => void
-    changeProductQuantity: (id: number, count: number) => void
-}
-
-const Main = ({
-    addProductToCart,
-    productsInCart,
-    removeProductFromCart,
-    changeProductQuantity,
-}: Props) => {
+const Main = () => {
     return (
         <Container
             maxWidth="lg"
@@ -28,10 +16,7 @@ const Main = ({
             component="main"
         >
             <Routes>
-                <Route
-                    path="/shop-project-react-solo/"
-                    element={<Home addProductToCart={addProductToCart} />}
-                />
+                <Route path="/shop-project-react-solo/" element={<Home />} />
                 <Route
                     path="shop-project-react-solo/about"
                     element={<AboutPage />}
@@ -46,12 +31,7 @@ const Main = ({
                 />
                 <Route
                     path="shop-project-react-solo/cart"
-                    element={
-                        <CartPage
-                            removeProductFromCart={removeProductFromCart}
-                            changeProductQuantity={changeProductQuantity}
-                        />
-                    }
+                    element={<CartPage />}
                 />
             </Routes>
         </Container>
