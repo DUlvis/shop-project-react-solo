@@ -20,16 +20,20 @@ const CartProductsList = ({
     const productsArray = useAppSelector((state) => state.products)
     const productsObject: ProductsObjectProps = getProductsObject(productsArray)
 
-    return (
-        <>
-            {Object.keys(productsInCart).map((productId) => (
-                <CartItem
-                    key={productId}
-                    product={productsObject[parseInt(productId)]}
-                    productCount={productsInCart[parseInt(productId)]}
-                />
-            ))}
-        </>
-    )
+    if (productsArray.length === 0) {
+        return null
+    } else {
+        return (
+            <>
+                {Object.keys(productsInCart).map((productId) => (
+                    <CartItem
+                        key={productId}
+                        product={productsObject[parseInt(productId)]}
+                        productCount={productsInCart[parseInt(productId)]}
+                    />
+                ))}
+            </>
+        )
+    }
 }
 export default CartProductsList
