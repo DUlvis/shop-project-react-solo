@@ -2,6 +2,12 @@ import { Button, Card, CardActions, CardContent } from '@mui/material'
 import './ProductsListItem.scss'
 import { useState } from 'react'
 import Quantity from 'components/Quantity/Quantity'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { toggleLikeState } from 'redux/likeReducer'
+import { addProductToCart } from 'redux/cartReducer'
+
 type Props = {
     id: number
     title: string
@@ -10,7 +16,6 @@ type Props = {
     capacity: string
     price: number
     image: string
-    addProductToCart: (id: number, count: number) => void
 }
 
 const ProductsListItem = ({
@@ -21,7 +26,6 @@ const ProductsListItem = ({
     capacity,
     price,
     image,
-    addProductToCart,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -32,9 +36,18 @@ const ProductsListItem = ({
         setCount((prevState: number) => prevState - 1)
     }
 
+    const isLiked = useAppSelector((state) => state.likeProducts[id])
+    const dispatch = useAppDispatch()
+
     return (
         <Card className="product" variant="outlined">
             <CardContent>
+                <Button
+                    variant="outlined"
+                    onClick={() => dispatch(toggleLikeState(id))}
+                >
+                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                </Button>
                 <div className="product-img">
                     <img src={image} alt="" />
                 </div>
@@ -59,7 +72,7 @@ const ProductsListItem = ({
             <CardActions className="btns-wrap">
                 <Button
                     variant="outlined"
-                    onClick={() => addProductToCart(id, count)}
+                    onClick={() => dispatch(addProductToCart({ id, count }))}
                 >
                     Add to cart
                 </Button>
