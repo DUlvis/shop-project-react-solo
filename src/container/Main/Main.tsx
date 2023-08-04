@@ -48,7 +48,6 @@ const Main = ({
                     path="shop-project-react-solo/cart"
                     element={
                         <CartPage
-                            productsInCart={productsInCart}
                             removeProductFromCart={removeProductFromCart}
                             changeProductQuantity={changeProductQuantity}
                         />

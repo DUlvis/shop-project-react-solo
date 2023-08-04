@@ -4,12 +4,12 @@ type LikeProducts = {
     [id: number]: boolean
 }
 
-export const initialState: LikeProducts = {
+const initialState: LikeProducts = {
     1: true,
     2: true,
 }
 
-export const likeSlice = createSlice({
+const likeSlice = createSlice({
     name: 'like',
     initialState,
     reducers: {

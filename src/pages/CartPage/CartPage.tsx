@@ -2,20 +2,16 @@ import { Typography, Grid } from '@mui/material'
 import CartProductsList from 'components/CartProductsList/CartProductsList'
 import CartProductsListItemExtended from 'components/CartProductsList/CartProductsListItemExtended'
 import CartTotal from 'components/CartTotal/CartTotal'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {
-    productsInCart: {
-        [id: number]: number
-    }
     removeProductFromCart: (id: number) => void
     changeProductQuantity: (id: number, count: number) => void
 }
 
-const CartPage = ({
-    productsInCart,
-    removeProductFromCart,
-    changeProductQuantity,
-}: Props) => {
+const CartPage = ({ removeProductFromCart, changeProductQuantity }: Props) => {
+    const productsInCart = useAppSelector((state) => state.productsInCart)
+
     return (
         <div>
             <Typography
